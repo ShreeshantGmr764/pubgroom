@@ -1,0 +1,2 @@
+Use font of Contact.jsx
+Make all font similar to each other
