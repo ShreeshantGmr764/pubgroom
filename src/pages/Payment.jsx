@@ -1,10 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import qr from '../assets/Qr.jpg';
+import { IoArrowBack } from "react-icons/io5";
 
 const Payment = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-            <div className="flex flex-col items-center justify-center w-full max-w-5xl">
+            {/* Back to Home Button */}
+            <button
+                onClick={() => navigate('/')}
+                className="absolute top-5 left-5 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition flex gap-1 "
+            >
+                <IoArrowBack className='text-2xl' /> Back to Home
+            </button>
+
+            <div className="flex flex-col items-center justify-center w-full max-w-5xl mt-12">
                 {/* Important Notice Section */}
                 <div className="w-full max-w-lg bg-red-500 dark:bg-red-700 shadow-lg rounded-2xl p-6 mb-8 text-white animate-fadeIn">
                     <h2 className="text-2xl font-semibold mb-4 font-sans">Important Notice</h2>
