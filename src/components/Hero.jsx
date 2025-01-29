@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { AiOutlineClose, AiOutlineArrowLeft } from "react-icons/ai";
 import {
   one_v_one_1,
   one_v_one_longrange_spray,
@@ -23,10 +24,23 @@ import {
   four_v_four_11round,
   best_spray_1v1,
   intense_tdm_1v1,
-  hero_img,
+  Hero_img,
 } from '../assets/assets';
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+  };
+
   const games1v1 = [
     { image: one_v_one_1, title: "1v1 Game 1", map: "1v1(1)" },
     { image: one_v_one_longrange_spray, title: "1v1 Game 2", map: "1v1 Longrange Spray" },
@@ -87,7 +101,8 @@ const Hero = () => {
             <img
               src={game.image}
               alt={game.title}
-              className="w-full h-auto rounded-lg transition duration-500 ease-in-out transform hover:scale-110"
+              className="w-full h-auto rounded-lg transition duration-500 ease-in-out transform hover:scale-110 cursor-pointer"
+              onClick={() => openModal(game.image)}
             />
           </div>
 
@@ -123,7 +138,7 @@ const Hero = () => {
     <div className="relative top-20 md:top-10 md:mt-8">
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row items-center justify-between p-6 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 shadow-xl rounded-xl transform transition-all duration-300 hover:scale-105">
-        <div className="w-full md:w-1/2 p-4 text-center md:text-left">
+        <div className="w-full md:w-1/2 p-4 text-center md:text-left lg:text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 text-white hover:text-yellow-200 transition duration-300 ease-in-out font-sans">
             Welcome to Gaming Hub
           </h1>
@@ -135,9 +150,9 @@ const Hero = () => {
         </div>
         <div className="w-full md:w-1/2 p-4">
           <img
-            src={hero_img}
+            src={Hero_img}
             alt="Gaming"
-            className="w-full h-auto rounded-lg transition duration-500 ease-in-out transform hover:scale-110"
+            className="w-full h-32 md:h-48 lg:h-64 rounded-lg transition duration-500 ease-in-out transform hover:scale-110"
           />
         </div>
       </div>
@@ -192,6 +207,29 @@ const Hero = () => {
           {renderGames(intenseTdmGames)}
         </div>
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-4 relative max-w-3xl w-full mx-4 lg:mx-0 animate-slide-down">
+            <button
+              className="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+              onClick={closeModal}
+            >
+              <AiOutlineClose className="w-6 h-6" />
+            </button>
+            <div className="relative">
+              <img src={selectedImage} alt="Selected Game" className="w-full h-auto rounded-lg mb-4" />
+              <button
+                className="absolute top-2 left-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                onClick={closeModal}
+              >
+                <AiOutlineArrowLeft className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

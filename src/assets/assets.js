@@ -28,6 +28,7 @@ import logo from "./Logo.png";
 import qr from "./Qr.jpg";
 
 import hero_img from "./Hero.jpg";
+import Hero_img from "./HeroImg.jpg";
 export {
   one_v_one_1,
   one_v_one_longrange_spray,
@@ -52,6 +53,7 @@ export {
   best_spray_1v1,
   intense_tdm_1v1,
   hero_img,	
+  Hero_img,
   logo,
   qr,
 };
