@@ -37,6 +37,7 @@ import best_spray_1v1 from "./BestSpray1v1.jpg";
 import intense_tdm_1v1 from "./IntanseTdm1v1.jpg";
 import tdm from "./tdm.jpg";
 import logo from "./Logo.png";
+import newlogo from "./Newlogo.jpg";
 import qr from "./Qr.jpg";
 import qr2 from "./Qr2.jpg";
 
@@ -75,6 +76,7 @@ export {
   hero_img,	
   Hero_img,
   logo,
+  newlogo,
   qr,
   qr2,
 };

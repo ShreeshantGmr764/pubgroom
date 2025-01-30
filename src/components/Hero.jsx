@@ -103,10 +103,10 @@ const Hero = () => {
     time: "N/A",
   }));
   const tdmGames = [
-    { image: tdm, title: " TDM Solo", map: " TDM 1v1", players: 2, fee: "Rs 25" },
-    { image: tdm, title: " TDM Duo", map: " TDM 1v1", players: 4, fee: "Rs 50" },
-    { image: tdm, title: " TDM Trio", map: " TDM 1v1", players: 6, fee: "Rs 75" },
-    { image: tdm, title: " TDM Squad", map: " TDM 1v1", players: 8, fee: "Rs 100" },
+    { image: tdm, title: " TDM Solo", map: " Warehouse", players: 2, fee: "Rs 25" },
+    { image: tdm, title: " TDM Duo", map: " Warehouse", players: 4, fee: "Rs 50" },
+    { image: tdm, title: " TDM Trio", map: " Warehouse", players: 6, fee: "Rs 75" },
+    { image: tdm, title: " TDM Squad", map: " Warehouse", players: 8, fee: "Rs 100" },
   ].map(game => ({
     ...game,
     odds: game.players === 2 || game.players === 4 ? "1.8" : "1.9",
