@@ -56,8 +56,7 @@ const Payment = () => {
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* FonePay Section */}
             <div className="w-full bg-white text-black shadow-lg rounded-2xl p-6 aspect-square flex flex-col items-center justify-center animate-fadeIn ">
-              <h2 className="text-2xl font-semibold mb-4 font-sans">Payment Method</h2>
-               <p className="text-lg font-mono">Qr Codes</p>
+              <h2 className="text-2xl font-semibold mb-4 font-sans">Qr Codes</h2>
                <p className="text-lg font-mono">Qr Code1</p>
                                       <img
                                           src={qr}
