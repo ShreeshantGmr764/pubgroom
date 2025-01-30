@@ -23,8 +23,19 @@ import three_v_three_syro from "./3v3_syro.jpg";
 import four_v_four_11round from "./4v4_11round.jpg";
 import four_v_four_apartment from "./4v4_apartment.jpg";
 
+import pmgc_severny from "./PMGC_Severny.jpg";
+import pmgc_yasnaya from "./PMGC_Yasnaya.jpg";
+
+import five_team_scrim from "./5_team-scrim.jpg";
+
+import eight_team_scrim from "./8_team_scrim.jpg";
+import eight_team_mini_scrim from "./8_team_mini_scrim.jpg";
+
+
+
 import best_spray_1v1 from "./BestSpray1v1.jpg";
 import intense_tdm_1v1 from "./IntanseTdm1v1.jpg";
+import tdm from "./tdm.jpg";
 import logo from "./Logo.png";
 import qr from "./Qr.jpg";
 import qr2 from "./Qr2.jpg";
@@ -55,6 +66,12 @@ export {
   four_v_four_apartment,
   best_spray_1v1,
   intense_tdm_1v1,
+  tdm,
+  eight_team_mini_scrim,
+  eight_team_scrim,
+  five_team_scrim,
+  pmgc_severny,
+  pmgc_yasnaya,
   hero_img,	
   Hero_img,
   logo,

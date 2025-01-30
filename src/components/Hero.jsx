@@ -25,7 +25,13 @@ import {
   four_v_four_apartment,
   best_spray_1v1,
   intense_tdm_1v1,
+  tdm,
   Hero_img,
+  eight_team_mini_scrim,
+  eight_team_scrim,
+  five_team_scrim,
+  pmgc_severny,
+  pmgc_yasnaya,
 } from '../assets/assets';
 
 const Hero = () => {
@@ -79,12 +85,13 @@ const Hero = () => {
     { image: four_v_four_11round, title: "4v4 Game 1", map: "4v4 11round" },
     { image: four_v_four_apartment, title: "4v4 Game 2", map: "4v4 apartment" },
   ].map(game => ({ ...game, players: 8, odds: "1.9", time: "6:00 PM", fee: "Rs 100" }));
-
+ 
+  
   const bestSprayGames = [
     { image: best_spray_1v1, title: "Best Spray 1", map: "Best Spray 1v1" },
     { image: best_spray_1v1, title: "Best Spray 2", map: "Best Spray 1v1" },
   ].map(game => ({ ...game, players: 2, odds: "1.9", time: "N/A", fee: "Rs 50" }));
-
+  
   const intenseTdmGames = [
     { image: intense_tdm_1v1, title: "Intense TDM Solo", map: "Intense TDM 1v1", players: 2, fee: "Rs 25" },
     { image: intense_tdm_1v1, title: "Intense TDM Duo", map: "Intense TDM 1v1", players: 4, fee: "Rs 50" },
@@ -95,11 +102,36 @@ const Hero = () => {
     odds: game.players === 2 || game.players === 4 ? "1.8" : "1.9",
     time: "N/A",
   }));
+  const tdmGames = [
+    { image: tdm, title: " TDM Solo", map: " TDM 1v1", players: 2, fee: "Rs 25" },
+    { image: tdm, title: " TDM Duo", map: " TDM 1v1", players: 4, fee: "Rs 50" },
+    { image: tdm, title: " TDM Trio", map: " TDM 1v1", players: 6, fee: "Rs 75" },
+    { image: tdm, title: " TDM Squad", map: " TDM 1v1", players: 8, fee: "Rs 100" },
+  ].map(game => ({
+    ...game,
+    odds: game.players === 2 || game.players === 4 ? "1.8" : "1.9",
+    time: "N/A",
+  }));
+  
+  const games5teams = [
+    { image: five_team_scrim, title: "5 Team mini scrim", map: "5 Teams Scrim" },
+  ].map(game => ({ ...game, players: 20, odds: "1.9", time: "6:00 PM", fee: "Rs 100" }));
+
+  const games8teams = [
+    { image: eight_team_scrim, title: "8 Team mini scrim", map: "8 Teams Scrim" },
+    { image: eight_team_mini_scrim, title: "8 Team mini scrim", map: "8 Teams Scrim" },
+  ].map(game => ({ ...game, players: 20, odds: "1.9", time: "6:00 PM", fee: "Rs 100" }));
+
+  const gamesPMGC = [
+    { image: pmgc_severny, title: "PMGC Severny  ", map: "PMGC Severny" },
+    { image: pmgc_yasnaya, title: "PMGC Yasnaya ", map: "PMGC Yasnaya" },
+  ].map(game => ({ ...game, players: 20, odds: "1.9", time: "6:00 PM", fee: "Rs 100" }));
+
 
   const renderGames = (games) =>
     games.map((game, index) => (
       <div
-        key={index}
+      key={index}
         className="bg-gray-100 dark:bg-gray-700 rounded-xl shadow-md p-6 hover:bg-gray-200 dark:hover:bg-gray-600 transform transition-all duration-300 hover:scale-105"
       >
         <div className="flex flex-col md:flex-row items-center">
@@ -213,6 +245,36 @@ const Hero = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {renderGames(intenseTdmGames)}
         </div>
+        
+        {/* 5 teams Scrim Section */}
+        <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mt-12 mb-6 font-sans">
+            5 Teams Scrim
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {renderGames(games5teams)}
+        </div>
+        {/* 8 teams Scrim Section */}
+        <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mt-12 mb-6 font-sans">
+            8 Teams Scrim
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {renderGames(games8teams)}
+        </div>
+        {/* PMGC  */}
+        <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mt-12 mb-6 font-sans">
+            PMGC Scrim
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {renderGames(gamesPMGC)}
+        </div>
+        {/* TDM games Section */}
+        <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mt-12 mb-6 font-sans">
+           TDM Games
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {renderGames(tdmGames)}
+        </div>
+
       </div>
 
       {/* Modal */}
