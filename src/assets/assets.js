@@ -29,7 +29,7 @@ import pmgc_yasnaya from "./PMGC_Yasnaya.jpg";
 import five_team_scrim from "./5_team-scrim.jpg";
 
 import eight_team_scrim from "./8_team_scrim.jpg";
-import eight_team_mini_scrim from "./8_team_mini_scrim.jpg";
+import eight_team_mini_scrim from "./8_teams.jpg";
 
 
 
