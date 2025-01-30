@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import qr from '../assets/assets';
-import qr2 from '../assets/assets';
+import qr from '../assets/Qr.jpg';
+import qr2 from '../assets/Qr2.jpg';
 import { IoArrowBack } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 

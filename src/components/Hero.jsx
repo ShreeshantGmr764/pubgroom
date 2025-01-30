@@ -119,7 +119,7 @@ const Hero = () => {
 
   const games8teams = [
     { image: eight_team_scrim, title: "8 Team mini scrim", map: "8 Teams Scrim" },
-    { image: eight_team_mini_scrim, title: "8 Team mini scrim", map: "8 Teams Scrim" },
+    { image: eight_team_mini_scrim, title: "8 Team mini scrim", map: "8 Teams Mini Scrim" },
   ].map(game => ({ ...game, players: 20, odds: "1.9", time: "6:00 PM", fee: "Rs 100" }));
 
   const gamesPMGC = [
