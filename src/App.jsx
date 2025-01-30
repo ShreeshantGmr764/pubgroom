@@ -7,6 +7,7 @@ import About from './pages/About'
 import Login from './components/Login'
 import Signup from './components/SignUp'
 import ContactComponent from './components/contactComponent'
+import Privacy from './pages/Privacy'
 
 
 
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/contactUs' element={<ContactComponent />} />
+        <Route path='/privacy' element={<Privacy />} />
       </Routes>
     </div>
   )

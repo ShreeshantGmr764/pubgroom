@@ -21,6 +21,7 @@ import three_v_three_shortgun from "./3v3_shortgun.jpg";
 import three_v_three_syro from "./3v3_syro.jpg";
 
 import four_v_four_11round from "./4v4_11round.jpg";
+import four_v_four_apartment from "./4v4_apartment.jpg";
 
 import best_spray_1v1 from "./BestSpray1v1.jpg";
 import intense_tdm_1v1 from "./IntanseTdm1v1.jpg";
@@ -50,6 +51,7 @@ export {
   three_v_three_shortgun,
   three_v_three_syro,
   four_v_four_11round,
+  four_v_four_apartment,
   best_spray_1v1,
   intense_tdm_1v1,
   hero_img,	

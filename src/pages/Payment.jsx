@@ -2,11 +2,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import qr from '../assets/Qr.jpg';
 import { IoArrowBack } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 const Payment = () => {
     const navigate = useNavigate();
 
     return (
+        <>
         <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
             {/* Back to Home Button */}
             <button
@@ -71,6 +73,24 @@ const Payment = () => {
                 </div>
             </div>
         </div>
+        <div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center justify-center mt-6">
+        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 Shreeshant Ghimire. All Rights Reserved.</span>
+        <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+          <li>
+            <Link to="/about" className="hover:underline me-4 md:me-6">About</Link>
+          </li>
+          <li>
+            <Link to="/privacy" className="hover:underline me-4 md:me-6">Privacy Policy</Link>
+          </li>
+          <li>
+            <a href="/terms" className="hover:underline me-4 md:me-6">Terms of Service</a>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:underline">Contact</Link>
+          </li>
+        </ul>
+      </div>
+        </>
     );
 };
 

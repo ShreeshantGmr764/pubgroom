@@ -22,6 +22,7 @@ import {
   three_v_three_shortgun,
   three_v_three_syro,
   four_v_four_11round,
+  four_v_four_apartment,
   best_spray_1v1,
   intense_tdm_1v1,
   Hero_img,
@@ -42,13 +43,12 @@ const Hero = () => {
   };
 
   const games1v1 = [
-    { image: one_v_one_1, title: "1v1 Game 1", map: "1v1(1)" },
-    { image: one_v_one_longrange_spray, title: "1v1 Game 2", map: "1v1 Longrange Spray" },
-    { image: one_v_one_m4_short, title: "1v1 Game 3", map: "1v1 m4 short" },
-    { image: one_v_one_m4_shortrange, title: "1v1 Game 4", map: "1v1 m4 shortrange" },
-    { image: one_v_one_ump_akm, title: "1v1 Game 5", map: "1v1 ump akm" },
-    { image: one_v_one_apartment, title: "1v1 Game 6", map: "1v1 Apartment" },
-    { image: one_v_one_m4, title: "1v1 Game 7", map: "1v1 M4" },
+    { image: one_v_one_longrange_spray, title: "1v1 Game 1", map: "1v1 Longrange Spray" },
+    { image: one_v_one_m4_short, title: "1v1 Game 2", map: "1v1 m4 short" },
+    { image: one_v_one_m4_shortrange, title: "1v1 Game 3", map: "1v1 m4 shortrange" },
+    { image: one_v_one_ump_akm, title: "1v1 Game 4", map: "1v1 ump akm" },
+    { image: one_v_one_apartment, title: "1v1 Game 5", map: "1v1 Apartment" },
+    { image: one_v_one_m4, title: "1v1 Game 6", map: "1v1 M4" },
   ].map(game => ({ ...game, players: 2, odds: "1.8", time: "3:00 PM", fee: "Rs 25" }));
 
   const games2v2 = [
@@ -71,6 +71,7 @@ const Hero = () => {
 
   const games4v4 = [
     { image: four_v_four_11round, title: "4v4 Game 1", map: "4v4 11round" },
+    { image: four_v_four_apartment, title: "4v4 Game 2", map: "4v4 apartment" },
   ].map(game => ({ ...game, players: 8, odds: "1.9", time: "6:00 PM", fee: "Rs 100" }));
 
   const bestSprayGames = [
@@ -216,15 +217,15 @@ const Hero = () => {
               className="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
               onClick={closeModal}
             >
-              <AiOutlineClose className="w-6 h-6" />
+              <AiOutlineClose className="w-6 h-6" /> 
             </button>
             <div className="relative">
               <img src={selectedImage} alt="Selected Game" className="w-full h-auto rounded-lg mb-4" />
               <button
-                className="absolute top-2 left-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                className="flex text-2xl font-bold absolute top-2 left-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
                 onClick={closeModal}
               >
-                <AiOutlineArrowLeft className="w-6 h-6" />
+                <AiOutlineArrowLeft className="w-6 h-6 text-2xl font-bold " /> Back To Home
               </button>
             </div>
           </div>
