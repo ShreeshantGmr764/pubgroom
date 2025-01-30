@@ -57,14 +57,13 @@ const Payment = () => {
             {/* FonePay Section */}
             <div className="w-full bg-white text-black shadow-lg rounded-2xl p-6 aspect-square flex flex-col items-center justify-center animate-fadeIn ">
               <h2 className="text-2xl font-semibold mb-4 font-sans">Payment Method</h2>
+              <p className="text-lg font-mono">Qr Codes</p>
                <p className="text-lg font-mono">Qr Codes</p>
-               <p className="text-lg font-mono">Qr Code1</p>
                                       <img
                                           src={qr}
                                           alt="FonePay QR Code"
                                           className="w-full h-auto rounded-lg shadow-lg"
                                       />
-              <p className="text-lg font-mono">Qr Code2</p>
                                       <img
                                           src={qr2}
                                           alt="FonePay QR Code"

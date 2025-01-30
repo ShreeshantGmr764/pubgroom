@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineClose, AiOutlineArrowLeft } from "react-icons/ai";
 import {
   one_v_one_1,
@@ -30,16 +30,22 @@ import {
 
 const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedGame, setSelectedGame] = useState(null);
+  const navigate = useNavigate();
 
-  const openModal = (image) => {
-    setSelectedImage(image);
+  const openModal = (game) => {
+    setSelectedGame(game);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setSelectedImage(null);
+    setSelectedGame(null);
+    navigate("/"); // Navigate back to home when modal closes
+  };
+
+  const handleEntryFeeClick = (game) => {
+    navigate("/payment", { state: { selectedGame: game } }); // Pass selected game data to Payment.jsx
   };
 
   const games1v1 = [
@@ -103,7 +109,7 @@ const Hero = () => {
               src={game.image}
               alt={game.title}
               className="w-full h-auto rounded-lg transition duration-500 ease-in-out transform hover:scale-110 cursor-pointer"
-              onClick={() => openModal(game.image)}
+              onClick={() => openModal(game)}
             />
           </div>
 
@@ -124,12 +130,12 @@ const Hero = () => {
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-2 font-mono">
               Time: {game.time}
             </p>
-            <Link
-              to="/payment"
+            <button
+              onClick={() => handleEntryFeeClick(game)}
               className="inline-block text-lg font-semibold text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-600 transition duration-300 ease-in-out font-sans"
             >
               Entry Fee: {game.fee}
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -212,22 +218,27 @@ const Hero = () => {
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
-          <div className="bg-white dark:bg-gray-800 rounded-lg p-4 relative max-w-3xl w-full mx-4 lg:mx-0 animate-slide-down">
-            <button
-              className="absolute top-2 right-2 text-white dark:text-gray-400 hover:text-orange-700 dark:hover:text-gray-300"
-              onClick={closeModal}
-            >
-              <AiOutlineClose className="w-6 h-6" /> 
-            </button>
-            <div className="relative">
-              <img src={selectedImage} alt="Selected Game" className="w-full h-auto rounded-lg mb-4" />
+          <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-2xl w-full">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold text-gray-800 dark:text-white">{selectedGame.title}</h2>
               <button
-                className="flex text-2xl font-bold absolute top-2 left-2 text-white dark:text-gray-400 hover:text-orange-700 dark:hover:text-gray-300"
                 onClick={closeModal}
+                className="text-gray-800 dark:text-white hover:text-gray-600 dark:hover:text-gray-300"
               >
-                <AiOutlineArrowLeft className="w-6 h-6 text-2xl font-bold " /> Back To Home
+                <AiOutlineClose size={24} />
               </button>
             </div>
+            <img
+              src={selectedGame.image}
+              alt={selectedGame.title}
+              className="w-full h-auto rounded-lg"
+            />
+            <button
+              onClick={closeModal}
+              className="mt-4 px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition"
+            >
+              Back to Home
+            </button>
           </div>
         </div>
       )}
