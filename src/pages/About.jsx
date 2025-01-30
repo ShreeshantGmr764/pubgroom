@@ -62,7 +62,7 @@ const About = () => {
             <Link to="/privacy" className="hover:underline me-4 md:me-6">Privacy Policy</Link>
           </li>
           <li>
-            <a href="/terms" className="hover:underline me-4 md:me-6">Terms of Service</a>
+            <a href="/https://discord.gg/M37AtvS2" className="hover:underline me-4 md:me-6">Feedback</a>
           </li>
           <li>
             <Link to="/contact" className="hover:underline">Contact</Link>

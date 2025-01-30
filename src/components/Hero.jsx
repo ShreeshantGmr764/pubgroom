@@ -214,7 +214,7 @@ const Hero = () => {
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
           <div className="bg-white dark:bg-gray-800 rounded-lg p-4 relative max-w-3xl w-full mx-4 lg:mx-0 animate-slide-down">
             <button
-              className="absolute top-2 right-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+              className="absolute top-2 right-2 text-white dark:text-gray-400 hover:text-orange-700 dark:hover:text-gray-300"
               onClick={closeModal}
             >
               <AiOutlineClose className="w-6 h-6" /> 
@@ -222,7 +222,7 @@ const Hero = () => {
             <div className="relative">
               <img src={selectedImage} alt="Selected Game" className="w-full h-auto rounded-lg mb-4" />
               <button
-                className="flex text-2xl font-bold absolute top-2 left-2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                className="flex text-2xl font-bold absolute top-2 left-2 text-white dark:text-gray-400 hover:text-orange-700 dark:hover:text-gray-300"
                 onClick={closeModal}
               >
                 <AiOutlineArrowLeft className="w-6 h-6 text-2xl font-bold " /> Back To Home

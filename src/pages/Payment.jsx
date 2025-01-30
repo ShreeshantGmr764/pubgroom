@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import qr from '../assets/Qr.jpg';
+import qr2 from '../assets/Qr2.jpg';
 import { IoArrowBack } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 
@@ -23,7 +24,8 @@ const Payment = () => {
                 <div className="w-full max-w-lg bg-red-500 dark:bg-red-700 shadow-lg rounded-2xl p-6 mb-8 text-white animate-fadeIn">
                     <h2 className="text-2xl font-semibold mb-4 font-sans">Important Notice</h2>
                     <p className="text-lg font-mono">
-                        You must screenshot the payment and send it to our Discord. If not, the team will not be qualified to play. You must also send the UID of the players.
+                        
+These are the only accepted payment methods. Payments made through other methods will not be valid and, in many cases, will not be refunded. You must take a screenshot of the payment and send it to our Discord. If proof of payment is not provided, the team will not be qualified to play. Additionally, you must also send the UIDs of all players.
                     </p>
                 </div>
 
@@ -33,11 +35,16 @@ const Payment = () => {
                 {/* Payment Options Container */}
                 <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {/* FonePay Section */}
-                    <div className="w-full bg-white text-black shadow-lg rounded-2xl p-6 aspect-square flex flex-col items-center justify-center animate-fadeIn">
+                    <div className="w-full bg-white text-black shadow-lg rounded-2xl p-6 aspect-square flex flex-col items-center justify-center animate-fadeIn ">
                         <h2 className="text-2xl font-semibold mb-4 font-sans">Payment Method</h2>
-                        <p className="text-lg font-mono">FonePay</p>
+                        <p className="text-lg font-mono">Qr Codes</p>
                         <img
                             src={qr}
+                            alt="FonePay QR Code"
+                            className="w-full h-auto rounded-lg shadow-lg"
+                        />
+                        <img
+                            src={qr2}
                             alt="FonePay QR Code"
                             className="w-full h-auto rounded-lg shadow-lg"
                         />
@@ -48,6 +55,7 @@ const Payment = () => {
                         <h2 className="text-2xl font-semibold mb-4 font-sans">Payment Method</h2>
                         <p className="text-lg font-mono">Khalti</p>
                         <p className="text-lg font-mono">Number: 9807440777</p>
+                        <p className="text-lg font-mono">Number: 9847933000</p>
                     </div>
 
                     {/* eSewa Section */}
@@ -55,6 +63,7 @@ const Payment = () => {
                         <h2 className="text-2xl font-semibold mb-4 font-sans">Payment Method</h2>
                         <p className="text-lg font-mono">eSewa</p>
                         <p className="text-lg font-mono">Number: 9807440777</p>
+                        <p className="text-lg font-mono">Number: 9847933000</p>
                     </div>
                 </div>
 
@@ -83,7 +92,7 @@ const Payment = () => {
             <Link to="/privacy" className="hover:underline me-4 md:me-6">Privacy Policy</Link>
           </li>
           <li>
-            <a href="/terms" className="hover:underline me-4 md:me-6">Terms of Service</a>
+            <a href="https://discord.gg/M37AtvS2" className="hover:underline me-4 md:me-6">Feedback</a>
           </li>
           <li>
             <Link to="/contact" className="hover:underline">Contact</Link>
