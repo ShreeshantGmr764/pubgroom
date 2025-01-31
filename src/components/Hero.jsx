@@ -197,7 +197,7 @@ const Hero = () => {
       </div>
 
       {/* Games List Sections */}
-      <div className="p-6 mt-6 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 rounded-xl shadow-xl">
+      <div className="p-6 mt-6 bg-white dark:bg-black text-gray-900 dark:text-gray-100 rounded-xl shadow-xl">
         {/* wow 1v1 Section */}
         <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mb-6 font-sans">
           wow 1v1 Games

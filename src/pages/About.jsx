@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
     return (
-        <>
-        <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white p-4">
+        <div className='bg-white dark:bg-black'>
+        <div className="flex justify-center items-center min-h-screen bg-gray-100 dark:bg-black text-gray-900 dark:text-white p-4">
             <div className="w-full max-w-lg md:max-w-4xl p-4 md:p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
                 <h1 className="text-3xl md:text-4xl font-extrabold mb-4 font-sans text-center">
                     About Our PUBG Custom Gaming Rooms
@@ -69,7 +69,7 @@ const About = () => {
                 </li>
             </ul>
         </div>
-        </>
+        </div>
     );
 };
 

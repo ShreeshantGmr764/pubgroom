@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
     return (
-        <>
-        <div className="h-screen w-screen flex items-center justify-center p-4 bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans sm:mt-10">
+        <div className='bg-white dark:bg-black'>
+        <div className="h-screen w-screen flex items-center justify-center p-4 bg-gray-100 dark:bg-black text-gray-900 dark:text-gray-100 font-sans">
             <Link to="/" className="absolute top-4 left-4 text-gray-900 dark:text-gray-100">
                 <FaArrowLeft className="text-2xl" />
             </Link>
@@ -102,7 +102,7 @@ const Contact = () => {
             </div>
             
         </div>
-        <div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center justify-center mt-6">
+        <div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center justify-center mt-6  dark:bg-black">
                 <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 Shreeshant Ghimire. All Rights Reserved.</span>
                 <ul className="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
                   <li>
@@ -119,7 +119,7 @@ const Contact = () => {
                   </li>
                 </ul>
               </div>
-              </>
+              </div>
     );
 };
 

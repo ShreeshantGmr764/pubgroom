@@ -5,7 +5,7 @@ import ContactComponent from '../components/contactComponent'
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-white dark:bg-black'>
       <Navbar/>
       <Hero/>
       <ContactComponent/>
