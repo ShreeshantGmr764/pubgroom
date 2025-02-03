@@ -328,7 +328,7 @@ const Hero = () => {
     ));
 
   return (
-    <div className="relative top-20 md:top-10 md:mt-8">
+    <div className="relative top-24 md:top-10 md:mt-8">
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row items-center justify-between p-6 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 shadow-xl rounded-xl transform transition-all duration-300 hover:scale-105">
         <div className="w-full md:w-1/2 p-4 text-center md:text-left lg:text-center">
