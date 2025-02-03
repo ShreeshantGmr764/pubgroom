@@ -2,7 +2,7 @@ import React from 'react';
 import { FaDiscord, FaInstagram, FaTiktok } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-const ContactComponent = () => {
+const Footer = () => {
   return (
     <footer className="bg-white rounded-lg shadow-sm  dark:bg-black mt-10 sm:mt-20 h-full">	  
       <div className="w-full mx-auto max-w-screen-xl p-4 flex flex-col items-center justify-center">
@@ -48,4 +48,4 @@ const ContactComponent = () => {
   );
 };
 
-export default ContactComponent;
+export default Footer;
