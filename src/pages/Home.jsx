@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import ContactComponent from '../components/contactComponent'
+import Footer from '../components/Footer'
 import { Analytics } from "@vercel/analytics/react"
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
     <div className='bg-white dark:bg-black'>
       <Navbar />
       <Hero />
-      <ContactComponent />
+      <Footer />
       <Analytics />
     </div>
   )
