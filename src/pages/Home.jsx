@@ -7,10 +7,10 @@ import { Analytics } from "@vercel/analytics/react"
 const Home = () => {
   return (
     <div className='bg-white dark:bg-black'>
-      <Navbar/>
-      <Hero/>
-      <ContactComponent/>
-      <Analytics/>
+      <Navbar />
+      <Hero />
+      <ContactComponent />
+      <Analytics />
     </div>
   )
 }

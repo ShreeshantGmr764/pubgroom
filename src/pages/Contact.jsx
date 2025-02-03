@@ -26,18 +26,13 @@ const Contact = () => {
                             <FaEnvelope className="text-blue-500" /> Email
                         </h2>
                         <a
-                            href="mailto:ghimiresrishant764@gmail.com"
+                            href="mailto:tournamenthubnepal@gmail.com"
                             className="ml-7 text-blue-600 dark:text-blue-400 underline hover:no-underline"
                         >
-                            ghimiresrishant764@gmail.com
+                            tournamenthubnepal@gmail.com
                         </a>
                         <br />
-                        <a
-                            href="mailto:parshannakhadka@gmail.com"
-                            className="ml-7 text-blue-600 dark:text-blue-400 underline hover:no-underline"
-                        >
-                            parshannakhadka@gmail.com
-                        </a>
+
                     </div>
 
                     {/* Phone Section */}
