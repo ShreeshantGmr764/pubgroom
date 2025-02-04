@@ -11,11 +11,13 @@ import BackButtonHandler from "./components/BackButtonHandler";
 import Blogs from "./pages/Blogs";
 import BlogsDetail from "./pages/BlogsDetail";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react"
 
 
 const App = () => {
   return (
     <>
+    <Analytics/>
       <BackButtonHandler /> {/* ✅ Handles back/esc behavior */}
       <Routes>
         <Route path="/" element={<Home />} />

@@ -449,7 +449,6 @@ const Hero = () => {
       </div>
 
         {/* Other game sections */}
-        {/* Continue the rest of your game sections in the same manner */}
       
 
       {/* Modal */}
