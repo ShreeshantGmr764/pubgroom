@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-6 text-gray-900 dark:text-white">Follow Us</h2>
           <div className="flex justify-center space-x-6 sm:space-x-8 dark:text-white">
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl hover:text-yellow-500 transition duration-300">
+            <a href="https://discord.gg/HdjrbhVm" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl hover:text-yellow-500 transition duration-300">
               <FaDiscord />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl hover:text-yellow-500 transition duration-300">
+            <a href="https://www.instagram.com/tournamenthub.nepal/" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl hover:text-yellow-500 transition duration-300">
               <FaInstagram />
             </a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl hover:text-yellow-500 transition duration-300">
+            <a href="https://www.tiktok.com/@tournament.hub.nepal" target="_blank" rel="noopener noreferrer" className="text-3xl sm:text-4xl hover:text-yellow-500 transition duration-300">
               <FaTiktok />
             </a>
           </div>
