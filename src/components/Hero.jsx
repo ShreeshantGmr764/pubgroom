@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineClose, AiOutlineArrowLeft } from "react-icons/ai";
+import { Helmet } from "react-helmet"; // Import react-helmet for meta tags
 import {
   one_v_one_1,
   one_v_one_longrange_spray,
@@ -132,6 +133,7 @@ const Hero = () => {
     },
   ].map((game) => ({ ...game, players: 4, odds: "1.9", fee: "Rs 50" }));
 
+
   const games3v3 = [
     { image: three_v_three_6round, title: "3v3 Game 1", map: "3v3 6round" },
     { image: three_v_three_11round, title: "3v3 Game 2", map: "3v3 11round" },
@@ -203,6 +205,7 @@ const Hero = () => {
     odds: game.players === 2 || game.players === 4 ? "1.8" : "1.9",
     time: "11:00 AM",
   }));
+
   const tdmGames = [
     {
       image: tdm,
@@ -271,6 +274,7 @@ const Hero = () => {
     fee: "Rs 100",
   }));
 
+
   const gamesPMGC = [
     { image: pmgc_severny, title: "PMGC Severny  ", map: "PMGC Severny" },
     { image: pmgc_yasnaya, title: "PMGC Yasnaya ", map: "PMGC Yasnaya" },
@@ -281,6 +285,8 @@ const Hero = () => {
     time: "8:00 PM",
     fee: "Rs 100",
   }));
+
+  // Repeat the above for all your game arrays (games3v3, games4v4, etc.)
 
   const renderGames = (games) =>
     games.map((game, index) => (
@@ -293,7 +299,7 @@ const Hero = () => {
           <div className="md:w-1/2 mb-4 md:mb-0 md:mr-4">
             <img
               src={game.image}
-              alt={game.title}
+              alt={`Game: ${game.title} - Map: ${game.map}`} // Improved alt text
               className="w-full h-auto rounded-lg transition duration-500 ease-in-out transform hover:scale-110 cursor-pointer"
               onClick={() => openModal(game)}
             />
@@ -329,6 +335,14 @@ const Hero = () => {
 
   return (
     <div className="relative top-24 md:top-10 md:mt-8">
+      <Helmet>
+        {/* Add meta tags for SEO */}
+        <title>Gaming Hub | Exciting 1v1, 2v2, 3v3, and More Games</title>
+        <meta name="description" content="Join Gaming Hub and experience thrilling multiplayer games like 1v1, 2v2, 3v3, and more! Compete and win exciting rewards." />
+        <meta name="keywords" content="gaming, multiplayer games, 1v1, 2v2, 3v3, gaming hub, esports" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
+
       {/* Hero Section */}
       <div className="flex flex-col md:flex-row items-center justify-between p-6 bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 shadow-xl rounded-xl transform transition-all duration-300 hover:scale-105">
         <div className="w-full md:w-1/2 p-4 text-center md:text-left lg:text-center">
@@ -344,7 +358,7 @@ const Hero = () => {
         <div className="w-full md:w-1/2 p-4">
           <img
             src={Hero_img}
-            alt="Gaming"
+            alt="Gaming Hub Hero Image" // Improved alt text
             className="w-full h-32 md:h-48 lg:h-64 rounded-lg transition duration-500 ease-in-out transform hover:scale-110"
           />
         </div>
@@ -380,11 +394,11 @@ const Hero = () => {
         <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mt-12 mb-6 font-sans">
           WOW 4v4 Games
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {renderGames(games4v4)}
         </div>
 
-        {/* Best Spray Section */}
+          {/* Best Spray Section */}
         <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mt-12 mb-6 font-sans">
           Best Spray Games
         </h2>
@@ -434,6 +448,10 @@ const Hero = () => {
         </div>
       </div>
 
+        {/* Other game sections */}
+        {/* Continue the rest of your game sections in the same manner */}
+      
+
       {/* Modal */}
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
@@ -451,15 +469,20 @@ const Hero = () => {
             </div>
             <img
               src={selectedGame.image}
-              alt={selectedGame.title}
+              alt={`Game: ${selectedGame.title} - Map: ${selectedGame.map}`} // Improved alt text
               className="w-full h-auto rounded-lg"
             />
-            <button
-              onClick={closeModal}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition"
-            >
-              Back to Home
-            </button>
+            <div className="mt-6">
+              <p className="text-lg text-gray-700 dark:text-gray-300">
+                Map: {selectedGame.map}
+              </p>
+              <p className="text-lg text-gray-700 dark:text-gray-300">
+                Time: {selectedGame.time}
+              </p>
+              <p className="text-lg text-gray-700 dark:text-gray-300">
+                Entry Fee: {selectedGame.fee}
+              </p>
+            </div>
           </div>
         </div>
       )}
