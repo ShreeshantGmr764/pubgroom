@@ -12,6 +12,7 @@ import Blogs from "./pages/Blogs";
 import BlogsDetail from "./pages/BlogsDetail";
 import Footer from "./components/Footer";
 
+
 const App = () => {
   return (
     <>
