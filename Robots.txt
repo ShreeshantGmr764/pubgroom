@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /tmp/
+Allow: /
+
+Sitemap: https://tournamenthubnepal.vercel.app/sitemap.xml
