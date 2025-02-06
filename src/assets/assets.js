@@ -43,6 +43,10 @@ import qr2 from "./Qr2.jpg";
 
 import hero_img from "./Hero.jpg";
 import Hero_img from "./HeroImg.jpg";
+
+import erangle from "./Erangle.jpg";
+import miramar from "./Miramar.jpg";
+import sanhok from "./Sanhok.jpg";
 export {
   one_v_one_1,
   one_v_one_longrange_spray,
@@ -73,6 +77,9 @@ export {
   five_team_scrim,
   pmgc_severny,
   pmgc_yasnaya,
+  erangle,
+  miramar,
+  sanhok,
   hero_img,	
   Hero_img,
   logo,

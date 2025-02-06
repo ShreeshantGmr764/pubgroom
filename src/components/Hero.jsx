@@ -27,6 +27,9 @@ import {
   best_spray_1v1,
   intense_tdm_1v1,
   tdm,
+  erangle,
+  miramar,
+  sanhok,
   Hero_img,
   eight_team_mini_scrim,
   eight_team_scrim,
@@ -285,7 +288,17 @@ const Hero = () => {
     time: "8:00 PM",
     fee: "Rs 100",
   }));
-
+  const scrim = [
+    { image: erangle, title: "Erangle 16 team Scrim", map: "Erangle" },
+    { image:  miramar, title: "Miramar 16 team Scrim ", map: "Miramar" },
+    { image: sanhok, title: "Sanhok 16 team Scrim ", map: "Sanhok" },
+  ].map((game) => ({
+    ...game,
+    players: 64,
+    odds: "7.00 Winner, 3.5 Runner Up, 2.0 2nd Runner Up , MVP:1",
+    time: "1:00 PM, 1:45 PM, 2:30 PM",
+    fee: "Rs 100",
+  }));
   // Repeat the above for all your game arrays (games3v3, games4v4, etc.)
 
   const renderGames = (games) =>
@@ -435,12 +448,12 @@ const Hero = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {renderGames(gamesPMGC)}
         </div>
-        {/* TDM games Section */}
+        {/* Scrims Section */}
         <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mt-12 mb-6 font-sans">
-          TDM Games
+          Scrims
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-          {renderGames(tdmGames)}
+          {renderGames(scrim)}
         </div>
 
         <div className="text-center mt-10  text-lg font-semibold text-blue-600 hover:underline dark:text-blue-400 dark:hover:text-blue-600 transition duration-300 ease-in-out font-sans p-6  bg-white dark:bg-black rounded-xl shadow-xl">

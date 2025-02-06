@@ -18,6 +18,6 @@
     <url>
         <loc>https://tournamenthubnepal.vercel.app/payment</loc>
         <changefreq>daily</changefreq>
-        <priority>1.0</priority> <!-- Priority max is 1.0, so '2' was adjusted -->
+        <priority>1.0</priority> 
     </url>
 </urlset>
