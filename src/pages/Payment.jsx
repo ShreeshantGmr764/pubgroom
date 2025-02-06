@@ -93,7 +93,7 @@ const Payment = () => {
                                   <h2 className="text-2xl font-semibold mb-4 font-sans">Confirm Payment and Send it to My Discord</h2>
                                   {/* Button for Payment Confirmation */}
                                   <a
-                                      href="https://discord.gg/JWRgbt8p"
+                                      href="https://discord.gg/fcVgVMMD"
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       className="w-full max-w-xs py-3 bg-blue-600 text-white text-lg font-semibold text-center rounded-xl shadow-md hover:bg-white hover:shadow-2xl hover:text-black transition duration-300 ease-in-out left-32 relative font-sans"
