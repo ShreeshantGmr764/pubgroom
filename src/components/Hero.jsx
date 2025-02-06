@@ -288,6 +288,7 @@ const Hero = () => {
     time: "8:00 PM",
     fee: "Rs 100",
   }));
+
   const scrim = [
     { image: erangle, title: "Erangle 16 team Scrim", map: "Erangle" },
     { image:  miramar, title: "Miramar 16 team Scrim ", map: "Miramar" },
@@ -425,6 +426,13 @@ const Hero = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {renderGames(intenseTdmGames)}
+        </div>
+        {/*  TDM Section */}
+        <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mt-12 mb-6 font-sans">
+           TDM Games
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          {renderGames(tdmGames)}
         </div>
 
         {/* 5 teams Scrim Section */}
