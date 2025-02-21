@@ -173,6 +173,16 @@ const Hero = () => {
     time: "7:30 pm",
     fee: "Rs 50",
   }));
+  const freeTournament = [
+    { image: erangle, title: "Erangle Free", map: "Erangle",time: "7:30 pm" },
+    { image: miramar, title: "Free Miramar", map: "Miramar",time: "8:10 pm", },
+    { image: sanhok, title: "Free sanhok", map: "Sanhok",time: "8:50 pm", },
+  ].map((game) => ({
+    ...game,
+    players: 64,
+    odds: "Winner:Rs 250, Runner Up:Rs 150, 2nd Runner Up:Rs 100, MVP:Rs 50",
+    fee: "Free",
+  }));
 
   const intenseTdmGames = [
     {
@@ -380,6 +390,14 @@ const Hero = () => {
 
       {/* Games List Sections */}
       <div className="p-6 mt-6 bg-white dark:bg-black text-gray-900 dark:text-gray-100 rounded-xl shadow-xl">
+        {/* Free Tournament Section */}
+        <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mb-6 font-sans">
+          Free Tournament
+        </h2>
+        <h1 className="text-4xl font-extrabold text-gray-800 dark:text-white mb-6 font-sans ">Join Discord For Registration <a className="text-blue-500 underline" href="https://discord.gg/V9WUMFfh">Register Now.</a></h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {renderGames(freeTournament)}
+        </div>
         {/* WOW 1v1 Section */}
         <h2 className="text-3xl font-extrabold text-gray-800 dark:text-white mb-6 font-sans">
           WOW 1v1 Games

@@ -1,18 +1,18 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import Footer from '../components/Footer'
-import { Analytics } from "@vercel/analytics/react"
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Footer from '../components/Footer';
+import { Analytics } from "@vercel/analytics/react";
 
-const Home = () => {
+const Home = ({ uploadedImages }) => {
   return (
     <div className='bg-white dark:bg-black'>
       <Navbar />
-      <Hero />
+      <Hero uploadedImages={uploadedImages} />
       <Footer />
       <Analytics />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

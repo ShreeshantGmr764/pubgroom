@@ -26,7 +26,7 @@ import four_v_four_apartment from "./4v4_apartment.jpg";
 import pmgc_severny from "./PMGC_Severny.jpg";
 import pmgc_yasnaya from "./PMGC_Yasnaya.jpg";
 
-import five_team_scrim from "./5_team-scrim.jpg";
+import five_team_scrim from "./5_team_scrim.jpg";
 
 import eight_team_scrim from "./8_team_scrim.jpg";
 import eight_team_mini_scrim from "./8_teams.jpg";
